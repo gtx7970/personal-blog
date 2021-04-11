@@ -10,8 +10,6 @@ vue 2.x
 
 ### props $emit
 
-```vue
-```
 
 ### lifeCycle
 挂载
@@ -62,8 +60,3 @@ hash history
 
 动态路由
 
-
-###
-```js
-outerHtml
-```
