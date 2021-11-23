@@ -123,20 +123,31 @@ function Parent() {}
 
 Parent.prototype.getName = function() {}
 
-function Child() {
-  Pareent.call(this)
+function Child(name) {
+  Parent.call(this, name)
   this.type = 'child'
 }
 
 // 缺点
-// 实例共用一个原型对象
+// 每次创建实例都会创建一遍方法
 ```
 
 3. 组合继承
 ```js
-function Parent() {}
+function Parent(name) {
+  this.name = name
+}
 
-Parent.pro
+Parent.prototype.getName = function () {
+  console.log(this.name)
+}
+
+function Children(name, age) {
+  Parent.call(this, name);
+  this.age = age
+}
+
+Child.prototype = new Parent()
 
 ```
 
